@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #967d19;
+}
+
+.header-heading {
+  color: whitesmoke;
+}
+
+.App {
+  max-width: 68rem;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.TodoWrapper {
+  background: #2c2929a5;
+  margin-top: 48px;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+}
+
+/* Todo Heading CSS Starts */
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 24px;
+}
+
+.todo-heading {
+  color: #ffcc00;
+  font-size: 2.5rem;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .todo-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+}
+/* Todo Heading CSS Ends*/
+
+/* Todo Input form CSS Start here */
+
+.TodoForm {
+  flex-grow: 1;
+  display: flex;
+}
+
+.todo-input {
+  flex-grow: 1;
+  outline: none;
+  border: 1px solid #4d4d4d;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.todo-input:focus {
+  border: 1px solid #ffcc00;
+}
+
+.todo-input::placeholder {
+  color: #cccccc;
+}
+
+.todo-btn {
+  background: #ffcc00;
+  color: #1a1a1a;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+@media (max-width: 480px) {
+  .TodoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .todo-btn {
+    margin-left: 0px;
+  }
+}
+
+/* Todo Input form CSS Ends here */
+
+/* Button CSS */
+button {
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Filter Button CSS Starts */
+.filter-buttons {
+  margin-bottom: 2rem;
+}
+
+.filter-buttons button {
+  background: #333333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin-right: 1rem;
+}
+
+.filter-buttons button:hover {
+  background: #7e6767;
+}
+
+/* Filter Button CSS Ends */
+
+/* Task CSS */
+
+.editForm {
+  margin-bottom: 24px;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333333;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 530px) {
+  .Todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.taskname {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.task-info {
+  display: flex;
+  align-items: baseline;
+}
+.task-info span {
+  display: inline-block;
+  font-weight: bolder;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.date-added {
+  margin-left: 1rem;
+  color: #cccccc;
+  font-size: 0.75rem;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: -0.2px;
+}
+
+/* Checked state styles for the checkbox */
+input[type="checkbox"]:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
